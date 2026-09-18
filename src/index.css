@@ -1,0 +1,300 @@
+/* ============================================================
+   DESIGN SYSTEM
+   Palette rationale: the site's two accents mirror the resume's own
+   throughline — a biotechnology foundation (teal, --bio) meeting
+   software systems work (violet, --systems). Near-black base, warm
+   paper-white ink. Space Grotesk carries headline personality;
+   JetBrains Mono is reserved for metadata, numbers and code.
+   ============================================================ */
+
+:root {
+  --bg: #08090b;
+  --bg-1: #0d0f13;
+  --bg-2: #12151b;
+  --bg-elevated: #161a21;
+  --line: rgba(237, 238, 233, 0.1);
+  --line-strong: rgba(237, 238, 233, 0.18);
+
+  --ink: #edeee9;
+  --ink-dim: #9aa0a6;
+  --ink-faint: #5c6167;
+
+  --bio: #5eead4;
+  --bio-dim: rgba(94, 234, 212, 0.14);
+  --systems: #948bf2;
+  --systems-dim: rgba(148, 139, 242, 0.16);
+  --amber: #f5b860;
+
+  --radius-s: 4px;
+  --radius-m: 10px;
+  --radius-l: 18px;
+
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --container: 1240px;
+  --pad: clamp(24px, 6vw, 64px);
+  --section-pad: clamp(72px, 12vh, 156px);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    /* This is a portfolio with an intentional dark identity — keep it
+       dark regardless of system theme, but still declare tokens so any
+       future light surface (e.g. printed resume) has a fallback. */
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--bg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+::selection {
+  background: var(--bio);
+  color: #04110d;
+}
+
+:focus-visible {
+  outline: 2px solid var(--bio);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ---------- layout primitives ---------- */
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--pad);
+  padding-right: var(--pad);
+}
+
+.section {
+  position: relative;
+  padding-top: var(--section-pad);
+  padding-bottom: var(--section-pad);
+  border-top: 1px solid var(--line);
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.section-number {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-faint);
+  letter-spacing: 0.08em;
+}
+
+.section-title {
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.section-kicker {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--bio);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: inline-block;
+}
+
+.section-desc {
+  max-width: 46ch;
+  color: var(--ink-dim);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.eyebrow-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+/* ---------- buttons / links ---------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 22px;
+  border-radius: var(--radius-s);
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid var(--line-strong);
+  transition: border-color 0.35s var(--ease-soft), transform 0.35s var(--ease-soft), background 0.35s var(--ease-soft);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  background: var(--bio);
+  border-color: var(--bio);
+}
+
+.btn-ghost:hover {
+  border-color: var(--bio);
+  color: var(--bio);
+  transform: translateY(-2px);
+}
+
+.link-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.link-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 1px;
+  background: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s var(--ease);
+}
+
+.link-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* ---------- misc utility ---------- */
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--line-strong);
+  color: var(--ink-dim);
+  white-space: nowrap;
+}
+
+.card {
+  background: linear-gradient(180deg, var(--bg-1), var(--bg-2));
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+@media (max-width: 720px) {
+  .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
