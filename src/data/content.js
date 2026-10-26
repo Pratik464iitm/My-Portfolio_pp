@@ -103,7 +103,7 @@ export const projects = [
     ],
     stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Socket.IO", "JWT", "RBAC"],
     flow: ["Client", "Workspace / Board / Task API", "MongoDB", "Socket.IO", "Live collaborators"],
-    github: "https://github.com/Pratik464iitm",
+    github: "https://github.com/Pratik464iitm/syncBoard_pp",
     demo: null,
   },
   {
@@ -124,7 +124,7 @@ export const projects = [
     ],
     stack: ["C++", "STL", "OOP", "File I/O"],
     flow: ["Input file", "Frequency analysis", "Huffman tree", "Binary codes", "Compressed file"],
-    github: "https://github.com/Pratik464iitm",
+    github: "https://github.com/Pratik464iitm/HuffZip__pp",
     demo: null,
   },
   {
@@ -165,7 +165,7 @@ export const projects = [
     ],
     stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Redis", "JWT"],
     flow: ["Short URL request", "Redis cache", "MongoDB (on miss)", "Redirect + analytics"],
-    github: "https://github.com/Pratik464iitm",
+    github: "https://github.com/Pratik464iitm/QuickLink",
     demo: null,
   },
 ];
