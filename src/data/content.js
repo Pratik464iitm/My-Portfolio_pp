@@ -22,7 +22,7 @@ export const personal = {
 export const education = [
   {
     school: "Indian Institute of Technology Madras",
-    detail: "Dual Degree in Biotechnology · CGPA 7.94/10",
+    detail: "Dual Degree in Biotechnology · CGPA 7.98/10",
     date: "Nov '22 – May '27",
   },
   {
