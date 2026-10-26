@@ -193,22 +193,22 @@ export const skillLinks = {
   "Python": [],
   "JavaScript": ["syncboard", "quicklink"],
   "SQL": [],
-  "React.js": ["syncboard", "quicklink", "diaxai"],
-  "Node.js": ["syncboard", "quicklink", "diaxai"],
-  "Express.js": ["syncboard", "quicklink", "diaxai"],
+  "React.js": ["syncboard", "quicklink", "soilsarthi"],
+  "Node.js": ["syncboard", "quicklink", "soilsarthi"],
+  "Express.js": ["syncboard", "quicklink", "soilsarthi"],
   "HTML": ["syncboard", "quicklink"],
   "CSS": ["syncboard", "quicklink"],
-  "MongoDB": ["syncboard", "quicklink", "diaxai"],
+  "MongoDB": ["syncboard", "quicklink", "soilsarthi"],
   "Redis": ["quicklink"],
   "Git": ["syncboard", "huffzip", "chatrelay", "quicklink"],
   "GitHub": ["syncboard", "huffzip", "chatrelay", "quicklink"],
-  "Postman": ["syncboard", "quicklink", "diaxai"],
+  "Postman": ["syncboard", "quicklink", "soilsarthi"],
 };
 
 // Labels shown when a skill lights up a node that isn't one of the four
 // showcased projects.
 export const extraNodes = {
-  diaxai: "Soil Sarthi internship",
+  soilsarthi: "Soil Sarthi internship",
 };
 
 export const competitive = [
