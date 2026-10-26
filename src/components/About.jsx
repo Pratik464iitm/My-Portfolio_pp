@@ -20,21 +20,22 @@ export default function About() {
               moving parts: cells, workspaces, compression trees, TCP connections.
             </p>
             <div className="about-body">
-              <p>
-                I'm a Dual Degree Biotechnology student at IIT Madras, but most of my hours go into
-                writing software: full-stack products with the MERN stack, low-level systems work in
-                C++, and problems solved against a contest clock on Codeforces and LeetCode.
-              </p>
-              <p>
-                What connects all of it is the same instinct — take something with real structure
-                (a workspace, a file, a network of clients) and build the layer that keeps it correct,
-                fast and legible. That shows up in a real-time board that never desyncs, a compressor
-                that rebuilds files bit-for-bit, and a chat server that never blocks.
-              </p>
-              <p>
-                Outside of code, I hold a strategist role in IIT Madras's Alumni Relations Cell and
-                play competitive cricket for my hostel and the institute.
-              </p>
+              
+            <p>
+              I'm a software engineering enthusiast at IIT Madras, focused on building full-stack
+              applications with the MERN stack, exploring systems programming in C++, and solving
+              algorithmic problems on Codeforces and LeetCode.
+            </p>
+            <p>
+              I enjoy understanding how software works beneath the surface — from backend architecture
+              and real-time communication to algorithms and data structures. My projects reflect this
+              approach, combining practical product development with an interest in building software
+              that's reliable, efficient, and well-engineered.
+            </p>
+            <p>
+              Beyond coding, I play competitive cricket for my hostel and the institute, bringing the
+              same focus, discipline, and team spirit to the field that I bring to engineering.
+            </p>
             </div>
           </Reveal>
 
