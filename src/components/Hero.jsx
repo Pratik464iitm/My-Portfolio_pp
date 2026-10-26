@@ -38,12 +38,12 @@ export default function Hero() {
           <h1 className="hero-title">
             <span className="reveal-line">
               <motion.span custom={0} variants={line} initial="hidden" animate="show" className="reveal-inner">
-                Building software
+                From algorithms to applications
               </motion.span>
             </span>
             <span className="reveal-line">
               <motion.span custom={1} variants={line} initial="hidden" animate="show" className="reveal-inner">
-                that thinks in <em>systems.</em>
+                
               </motion.span>
             </span>
           </h1>
