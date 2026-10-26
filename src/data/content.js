@@ -208,7 +208,7 @@ export const skillLinks = {
 // Labels shown when a skill lights up a node that isn't one of the four
 // showcased projects.
 export const extraNodes = {
-  diaxai: "Diax.ai internship",
+  diaxai: "Soil Sarthi internship",
 };
 
 export const competitive = [
