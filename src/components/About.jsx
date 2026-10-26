@@ -16,8 +16,8 @@ export default function About() {
         <div className="about-grid">
           <Reveal className="about-copy">
             <p className="about-lede">
-              From biological systems to software systems — I'm drawn to structures that have
-              moving parts: cells, workspaces, compression trees, TCP connections.
+              From backend architecture to low-level networking, I enjoy understanding how individual 
+              components come together to build reliable software.
             </p>
             <div className="about-body">
               
