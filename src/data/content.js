@@ -50,23 +50,39 @@ export const scholastic = [
   },
 ];
 
+
 export const experience = [
   {
-    company: "Diax.ai",
-    role: "Software Engineering Intern",
+    company: "Soil Sarthi",
+    role: "Full-Stack Developer",
     date: "Mar '25 – May '25",
-    stack: ["React.js", "Node.js", "Express.js", "MongoDB", "Mongoose", "OpenAI Whisper", "LinkedIn API", "Postman"],
-    summary:
-      "Built a full-stack healthcare platform used to streamline clinical workflows, from patient-facing screens down to the data layer.",
-    points: [
-      "Built a full-stack healthcare platform with React.js, Node.js, Express.js and MongoDB to streamline clinical workflows.",
-      "Developed RESTful APIs and designed MongoDB collections with Mongoose for efficient healthcare data management.",
-      "Automated publishing of 30+ blog posts through the LinkedIn API, using Postman to test and validate every endpoint.",
-      "Built and deployed an automated transcription pipeline for 100+ doctor–patient consultations using OpenAI Whisper, cutting down manual documentation work.",
+    stack: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Mongoose",
+      "OpenAI Whisper API",
+      "LinkedIn API",
+      "Postman",
     ],
-    flow: ["Consultation audio", "OpenAI Whisper", "Transcription pipeline", "Clinical documentation"],
+    summary:
+      "Built a full-stack AgriTech platform to enable digital farming services and improve accessibility for farmers.",
+    points: [
+      "Built a full-stack AgriTech platform using React.js, Node.js, Express.js, and MongoDB to enable digital farming services.",
+      "Developed RESTful APIs and designed MongoDB schemas with Mongoose, testing and validating endpoints using Postman.",
+      "Automated publishing of 30+ blog posts through the LinkedIn API, reducing manual content publishing effort.",
+      "Built a voice-based farmer query feature using the OpenAI Whisper API to convert spoken agricultural queries into text, enabling more accessible platform interaction.",
+    ],
+    flow: [
+      "Farmer's voice query",
+      "OpenAI Whisper API",
+      "Speech-to-text conversion",
+      "Text-based query",
+    ],
   },
 ];
+
 
 export const projects = [
   {
