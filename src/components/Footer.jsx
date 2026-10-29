@@ -5,7 +5,6 @@ export default function Footer() {
     <footer className="footer">
       <div className="container footer-inner">
         <span className="mono">{personal.name} — {personal.institute}</span>
-        <span className="mono">© {new Date().getFullYear()} · built with intent, not a template</span>
       </div>
 
       <style>{`
