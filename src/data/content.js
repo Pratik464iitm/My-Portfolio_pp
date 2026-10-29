@@ -14,7 +14,7 @@ export const personal = {
     linkedin: "https://linkedin.com/in/PratikPanwar",
     github: "https://github.com/Pratik464iitm",
     codeforces: "https://codeforces.com/profile/pratik_cf464",
-    email: null, // not provided on resume — shown as a placeholder in Contact
+    email: "pratikpanwar464@gmail.com",
   },
   resumeFile: "/resume.pdf",
 };
