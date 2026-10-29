@@ -1,12 +1,13 @@
-import { ArrowUpRight, Github, Linkedin, Code2 } from "lucide-react";
+import { ArrowUpRight, Github, Linkedin, Code2, Mail } from "lucide-react";
 import Reveal from "./Reveal.jsx";
 import MagneticButton from "./MagneticButton.jsx";
 import { personal } from "../data/content.js";
 
 const links = [
-  { label: "LinkedIn", href: personal.links.linkedin, icon: Linkedin },
-  { label: "GitHub", href: personal.links.github, icon: Github },
-  { label: "Codeforces", href: personal.links.codeforces, icon: Code2 },
+  { label: "LinkedIn", href: personal.links.linkedin, icon: Linkedin, external: true },
+  { label: "GitHub", href: personal.links.github, icon: Github, external: true },
+  { label: "Codeforces", href: personal.links.codeforces, icon: Code2, external: true },
+  { label: "Email", href: `mailto:${personal.links.email}`, icon: Mail },
 ];
 
 export default function Contact() {
@@ -26,18 +27,13 @@ export default function Contact() {
         <Reveal delay={0.1} y={20}>
           <p className="contact-desc">
             Open to software engineering internships and roles — full-stack, backend, or systems.
-            {personal.links.email ? (
-              <> Reach me at <a href={`mailto:${personal.links.email}`} className="link-underline">{personal.links.email}</a>.</>
-            ) : (
-              <> Email on request — reach out on LinkedIn to start the conversation.</>
-            )}
           </p>
         </Reveal>
 
         <Reveal delay={0.2} y={20} className="contact-links">
-          {links.map(({ label, href, icon: Icon }) => (
+          {links.map(({ label, href, icon: Icon, external }) => (
             <MagneticButton key={label} strength={0.25}>
-              <a href={href} target="_blank" rel="noopener noreferrer" className="contact-link" data-cursor="link">
+              <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined} className="contact-link" data-cursor="link">
                 <Icon size={16} />
                 <span>{label}</span>
                 <ArrowUpRight size={14} className="contact-link-arrow" />
