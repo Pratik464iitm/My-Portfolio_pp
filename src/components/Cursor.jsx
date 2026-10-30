@@ -225,6 +225,10 @@ export default function Cursor() {
           margin-top: -24px;
           border-color: #948bf2;
         }
+          /* Hide cursor ring when project details are open */
+        body:has(.modal-scrim) .cursor-ring {
+          display: none !important;
+        }
 
         @media (max-width: 900px) {
           .cursor-dot, .cursor-ring {
