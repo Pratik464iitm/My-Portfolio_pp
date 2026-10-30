@@ -144,7 +144,7 @@ export const projects = [
     ],
     stack: ["C++", "Boost.Asio", "TCP Sockets", "Multithreading"],
     flow: ["Client", "TCP socket", "Server (Boost.Asio)", "Concurrent clients"],
-    github: "https://github.com/Pratik464iitm",
+    github: "https://github.com/Pratik464iitm/chatRealy_pp",
     demo: null,
   },
   {
